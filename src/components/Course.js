@@ -1,10 +1,18 @@
 import React from 'react'
 import Part from './Part'
-const Course = ({course}) => {
+import Sum from './Sum'
+const Course = ({courses}) => {
     return(
+        
         <div>
-            <h1>{course.name}</h1>
-            <Part course={course} id={course.id}/>
+            {courses.map(course => 
+                <div>{console.log(course)}
+                    <h1>{course.name}</h1>
+                    <Part course={course} id={course.id}/>
+                    <Sum course={course} id={course.id} />
+                </div>
+            )}
+            
         </div>
 
     )

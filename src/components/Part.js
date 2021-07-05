@@ -4,7 +4,7 @@ const Part = ({course}) => {
     return(
     <ul>
         {course.parts.map(part => 
-            <li>{part.name}:{part.exercises}</li>
+            <li key={part.id}>{part.name}:{part.exercises}</li>
             )}
     </ul>
     )
